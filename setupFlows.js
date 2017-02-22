@@ -8,7 +8,6 @@ fs.readFile('config.json', (err,data) => {
     dataJSON = JSON.parse(data)
     for (flow of dataJSON) {
         sendFlowRules(flow)
-        setupListener(flow)
     }
 })
 
