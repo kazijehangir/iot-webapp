@@ -80,7 +80,8 @@ function setupListener(flow) {
     var dgram = require('dgram')
     var server = dgram.createSocket('udp4')
     var packetCount = 0
-    var allowedRate = 5
+    var allowedRate = getAllowedRate(flow['policy'])
+
     server.on('listening', function () {
         var address = server.address()
         console.log('UDP Server listening on ' + address.address + ":" + address.port)
@@ -97,4 +98,15 @@ function setupListener(flow) {
         }
     })
     server.bind(PORT)
+}
+function getAllowedRate(policy) {
+    if (policy == 'coursegrain1') {
+        return 2
+    } else if (policy == 'coursegrain2') {
+        return 5
+    } else if (policy == 'coursegrain3') {
+        return 10
+    } else {
+        return 1
+    }
 }

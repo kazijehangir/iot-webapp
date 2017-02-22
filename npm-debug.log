@@ -1,0 +1,100 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/bin/nodejs', '/usr/bin/npm', 'install', '-g', 'nodemon' ]
+2 info using npm@3.5.2
+3 info using node@v4.2.6
+4 verbose stack Error: could not get uid/gid
+4 verbose stack net.js:129
+4 verbose stack     this._handle.open(options.fd);
+4 verbose stack                  ^
+4 verbose stack
+4 verbose stack Error: EINVAL: invalid argument, uv_pipe_open
+4 verbose stack     at Error (native)
+4 verbose stack     at new Socket (net.js:129:18)
+4 verbose stack     at createWritableStdioStream (node.js:605:18)
+4 verbose stack     at process.stdout (node.js:631:16)
+4 verbose stack     at console.js:92:37
+4 verbose stack     at NativeModule.compile (node.js:957:5)
+4 verbose stack     at Function.NativeModule.require (node.js:902:18)
+4 verbose stack     at node.js:200:27
+4 verbose stack     at Object.<anonymous> (/usr/share/npm/node_modules/uid-number/get-uid-gid.js:16:1)
+4 verbose stack     at Module._compile (module.js:410:26)
+4 verbose stack
+4 verbose stack     at /usr/share/npm/node_modules/uid-number/uid-number.js:37:16
+4 verbose stack     at ChildProcess.exithandler (child_process.js:220:5)
+4 verbose stack     at emitTwo (events.js:87:13)
+4 verbose stack     at ChildProcess.emit (events.js:172:7)
+4 verbose stack     at maybeClose (internal/child_process.js:821:16)
+4 verbose stack     at Socket.<anonymous> (internal/child_process.js:319:11)
+4 verbose stack     at emitOne (events.js:77:13)
+4 verbose stack     at Socket.emit (events.js:169:7)
+4 verbose stack     at Pipe._onclose (net.js:469:12)
+5 verbose cwd /mnt/c/LUMS-Current/Iot/webapp
+6 error Linux 4.4.0-43-Microsoft
+7 error argv "/usr/bin/nodejs" "/usr/bin/npm" "install" "-g" "nodemon"
+8 error node v4.2.6
+9 error npm  v3.5.2
+10 error code Error: Command failed: /usr/bin/nodejs /usr/share/npm/node_modules/uid-number/get-uid-gid.js nobody 1000
+10 error code net.js:129
+10 error code     this._handle.open(options.fd);
+10 error code                  ^
+10 error code
+10 error code Error: EINVAL: invalid argument, uv_pipe_open
+10 error code     at Error (native)
+10 error code     at new Socket (net.js:129:18)
+10 error code     at createWritableStdioStream (node.js:605:18)
+10 error code     at process.stdout (node.js:631:16)
+10 error code     at console.js:92:37
+10 error code     at NativeModule.compile (node.js:957:5)
+10 error code     at Function.NativeModule.require (node.js:902:18)
+10 error code     at node.js:200:27
+10 error code     at Object.<anonymous> (/usr/share/npm/node_modules/uid-number/get-uid-gid.js:16:1)
+10 error code     at Module._compile (module.js:410:26)
+10 error code
+10 error code     at ChildProcess.exithandler (child_process.js:213:12)
+10 error code     at emitTwo (events.js:87:13)
+10 error code     at ChildProcess.emit (events.js:172:7)
+10 error code     at maybeClose (internal/child_process.js:821:16)
+10 error code     at Socket.<anonymous> (internal/child_process.js:319:11)
+10 error code     at emitOne (events.js:77:13)
+10 error code     at Socket.emit (events.js:169:7)
+10 error code     at Pipe._onclose (net.js:469:12)
+10 error code  { [Error: Command failed: /usr/bin/nodejs /usr/share/npm/node_modules/uid-number/get-uid-gid.js nobody 1000
+10 error code net.js:129
+10 error code     this._handle.open(options.fd);
+10 error code                  ^
+10 error code
+10 error code Error: EINVAL: invalid argument, uv_pipe_open
+10 error code     at Error (native)
+10 error code     at new Socket (net.js:129:18)
+10 error code     at createWritableStdioStream (node.js:605:18)
+10 error code     at process.stdout (node.js:631:16)
+10 error code     at console.js:92:37
+10 error code     at NativeModule.compile (node.js:957:5)
+10 error code     at Function.NativeModule.require (node.js:902:18)
+10 error code     at node.js:200:27
+10 error code     at Object.<anonymous> (/usr/share/npm/node_modules/uid-number/get-uid-gid.js:16:1)
+10 error code     at Module._compile (module.js:410:26)
+10 error code ]
+10 error code   killed: false,
+10 error code   code: 1,
+10 error code   signal: null,
+10 error code   cmd: '/usr/bin/nodejs /usr/share/npm/node_modules/uid-number/get-uid-gid.js nobody 1000' }
+11 error could not get uid/gid
+11 error net.js:129
+11 error     this._handle.open(options.fd);
+11 error                  ^
+11 error
+11 error Error: EINVAL: invalid argument, uv_pipe_open
+11 error     at Error (native)
+11 error     at new Socket (net.js:129:18)
+11 error     at createWritableStdioStream (node.js:605:18)
+11 error     at process.stdout (node.js:631:16)
+11 error     at console.js:92:37
+11 error     at NativeModule.compile (node.js:957:5)
+11 error     at Function.NativeModule.require (node.js:902:18)
+11 error     at node.js:200:27
+11 error     at Object.<anonymous> (/usr/share/npm/node_modules/uid-number/get-uid-gid.js:16:1)
+11 error     at Module._compile (module.js:410:26)
+12 error If you need help, you may report this error at:
+12 error     <https://github.com/npm/npm/issues>
+13 verbose exit [ 1, true ]
