@@ -26,7 +26,7 @@ io.on('connection', (socket) => {
     socket.emit('to_client', dataJSON)
   })
   socket.on('to_server', data => {
-    strJSON = data.stringify()
+    strJSON = JSON.stringify(data)
     fs.writeFile('config2.json', strJSON, 'utf8', () => console.log('Config File written'));
   })
   socket.on('disconnect', () => {
