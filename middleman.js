@@ -79,20 +79,22 @@ function setupListener(flow) {
     var PORT = flow['port']
     var dgram = require('dgram')
     var server = dgram.createSocket('udp4')
-
+    var packetCount = 0
+    var allowedRate = 5
     server.on('listening', function () {
         var address = server.address()
         console.log('UDP Server listening on ' + address.address + ":" + address.port)
     })
     server.on('message', function (message, remote) {
         console.log(remote.address + ':' + remote.port +' - ' + message)
-        var client = dgram.createSocket('udp4')
-        client.send(message, 0, message.length, PORT, flow['dstIP'], function(err, bytes) {
-            if (err) throw err
-            console.log('UDP message sent to ' + HOST +':'+ PORT)
-            client.close()
-        })
-
+        if (packetCount++ % allowedRate == 0) {
+            var client = dgram.createSocket('udp4')
+            client.send(message, 0, message.length, PORT, flow['dstIP'], function(err, bytes) {
+                if (err) throw err
+                console.log('UDP message sent to ' + HOST +':'+ PORT)
+                client.close()
+            })
+        }
     })
     server.bind(PORT)
 }
