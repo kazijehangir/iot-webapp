@@ -27,7 +27,7 @@ io.on('connection', (socket) => {
   })
   socket.on('to_server', data => {
     strJSON = JSON.stringify(data)
-    fs.writeFile('config2.json', strJSON, 'utf8', () => console.log('Config File written'));
+    fs.writeFile('config.json', strJSON, 'utf8', () => console.log('Config File written'));
   })
   socket.on('disconnect', () => {
     console.log('a user disconnected')
