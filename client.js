@@ -1,8 +1,17 @@
+const socket = io()
+var dataJSON = {}
+
+socket.on('to_client', data => {
+    dataJSON = data
+})
+
 function applyRules() {
     console.log('Apply rules ')
     console.log($('#flow1').parent())
     console.log($('#flow2').parent())
-    
+    dataJSON[0]['policy'] = $('#flow1').parent()[0].id
+    dataJSON[1]['policy'] = $('#flow2').parent()[0].id
+    socket.emit('to_server', dataJSON)
 }
 function resetRules() {
     console.log('Resetting...')
