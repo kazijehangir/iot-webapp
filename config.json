@@ -1,0 +1,8 @@
+[{"flowname": "flow1",
+     "srcIP": "10.0.0.1", "srcMAC": "36:3d:f9:17:6a:21",
+     "dstIP": "10.0.0.2", "dstMAC": "b6:64:c6:b0:27:42",
+     "policy": "coursegrain2", "port": 5001},
+{"flowname": "flow2",
+     "srcIP": "10.0.0.2", "srcMAC": "b6:64:c6:b0:27:42",
+     "dstIP": "10.0.0.1", "dstMAC": "36:3d:f9:17:6a:21",
+     "policy": "coursegrain2", "port": 5002}]

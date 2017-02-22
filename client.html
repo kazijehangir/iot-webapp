@@ -1,0 +1,155 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.4.2.min.js"></script>
+    <script type="text/javascript" src="client.js"></script>
+
+    <title>SIC - Simple Information Control</title>
+
+    <style>
+        body {
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        }
+        
+        #board {
+            width: 1250px;
+            height: 300px;
+            position: relative;
+        }
+        
+        .title {
+            background-color: #002885;
+            text-align: center;
+            color: white;
+            padding: 2px 0px;
+            
+        }
+        
+      
+        #scrub {
+            left: 250px;
+        }
+        
+        #coursegrain1 {
+            left: 500px;
+        }
+        
+        #coursegrain2 {
+            left: 750px;
+        }
+        #coursegrain3 {
+            left: 1000px;
+        }
+        #freeflowing,
+        #scrub,
+        #coursegrain1,
+        #coursegrain2,
+        #coursegrain3 {
+            background-color: #6EEEEE;
+            position: absolute;
+            width: 250px;
+            min-height: 150px;
+            border: 2px solid black;
+        }
+        
+        *[draggable=true] {
+            float: left;
+            min-width: 50px;
+            min-height: 50px;
+            border: 2px solid black;
+            margin: 10px;
+            font-weight: bold;
+            min-height: 60px;
+            /*background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0.63, white), color-stop(0.92, rgb(5, 161, 245)));*/
+            /*background-image: -moz-linear-gradient( center top, white 63%, rgb(5, 161, 245) 92%);*/
+            background-color: rgb(255, 255, 255);
+            -webkit-background-size: 1px 8px;
+            -moz-background-size: 1px 8px;
+            background-size: 1px 8px;
+            background-repeat: repeat;
+        }
+        
+        .cardTitle {
+            color: rgb(255, 255, 255);
+            background-color: rgb(0,0,0);
+            /*border: 2px solid white;*/
+        }
+        .applyBtn {
+            background-color: #4CAF50; /* Green */
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+        }
+        .resetBtn {background-color: #f44336; /* Red */ 
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+        } 
+
+    </style>
+</head>
+<h1>
+    SIC - Simple Information Control
+</h1>
+<body>
+    <table>
+        <tr>
+            <div id="board">
+                <div id="freeflowing">
+                    <div class="title">Free Flowing</div>
+                    <div id="flow1" draggable="true" class="flows">
+                        <div class="cardTitle">
+                            Flow 1
+                        </div>
+                        <div>
+                            GPS -> Weather
+                        </div>                    
+                    </div>
+                    <div id="flow2" draggable="true" class="flows">
+                        <div class="cardTitle">
+                            Flow 2
+                        </div>
+                        <div>
+                            GPS -> Maps
+                        </div>      
+                    </div>
+                    <!--<div id="item3" draggable="true">Make an amazing site</div>-->
+                    <!--<div id="item4" draggable="true">Impress my friends</div>-->
+                </div>
+                <div id="scrub">
+                    <div class="title">Scrub Sensitive Info</div>
+                </div>
+
+                <div id="coursegrain1">
+                    <div class="title">Course Grain - Light</div>
+                </div>
+                <div id="coursegrain2">
+                    <div class="title">Course Grain - Moderate</div>
+                </div>
+                <div id="coursegrain3">
+                    <div class="title">Course Grain - Extreme</div>
+                </div>
+            </div>
+        </tr>
+        <tr>
+            <td>
+                <button class="applyBtn" id='applyButton'>Apply Rules</button>
+            </td>
+            <td>
+                <button class="resetBtn" id='resetButton'>Reset</button>
+            </td>
+        </tr>
+    </table>
+</body>
+
+</html>
