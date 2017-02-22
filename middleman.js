@@ -92,7 +92,7 @@ function setupListener(flow) {
             var client = dgram.createSocket('udp4')
             client.send(message, 0, message.length, PORT, flow['dstIP'], function(err, bytes) {
                 if (err) throw err
-                console.log('UDP message sent to ' + HOST +':'+ PORT)
+                console.log('UDP message sent to ' + HOST +':'+ PORT + ' Packet Num: ' + packetCount)
                 client.close()
             })
         }
