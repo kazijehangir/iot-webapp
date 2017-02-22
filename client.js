@@ -1,5 +1,8 @@
 function applyRules() {
     console.log('Apply rules ')
+    console.log($('#flow1').parent())
+    console.log($('#flow2').parent())
+    
 }
 function resetRules() {
     console.log('Resetting...')
