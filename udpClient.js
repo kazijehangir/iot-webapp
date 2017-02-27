@@ -15,7 +15,7 @@ client.on('message', function (message, remote) {
     // console.log(message.toString())
     console.timeEnd(message)
     var s = message.toString().split(' ')[1]
-    var j = s.parseInt()
+    var j = parseInt(s,10)
     var duration = Date.now() - times[j]
     console.log(j.toString() + ',' + duration)
 });
