@@ -12,7 +12,7 @@ fs.readFile('config.json', (err,data) => {
 })
 
 var options = {
-  hostname: '192.168.22.137',
+  hostname: '192.168.22.141',
   port: 8080,
   path: '/wm/staticflowpusher/json',
   method: 'POST',
