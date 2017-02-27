@@ -38,7 +38,7 @@ function sendFlowRules(flow) {
         +flow['srcIP'].split('.')[3]+'","active":"true", "eth_type":"0x0800","eth_src":"'
         +flow['srcMAC']+'", "eth_dst":"'+flow['dstMAC']+'", "ipv4_src":"'
         +flow['srcIP']+'", "ipv4_dst":"'+flow['dstIP']+
-        '", "actions":"set_field=eth_dst->32:ee:14:eb:de:4e,set_field=ipv4_dst->10.0.0.3,output=3"}'
+        '", "actions":"set_field=eth_dst->92:ab:1d:b3:83:51,set_field=ipv4_dst->10.0.0.3,output=3"}'
     
     // write data to request body
     req1.write(message)
@@ -60,7 +60,7 @@ function sendFlowRules(flow) {
     })
 
     message2 = '{"switch":"00:00:00:00:00:00:00:01","name":"'+flow['flowname']+
-    '-rev","priority":"32768","in_port":"3","active":"true", "eth_type":"0x0800","eth_src":"32:ee:14:eb:de:4e", "eth_dst":"'
+    '-rev","priority":"32768","in_port":"3","active":"true", "eth_type":"0x0800","eth_src":"92:ab:1d:b3:83:51", "eth_dst":"'
         +flow['srcMAC']+'", "ipv4_src":"10.0.0.3", "ipv4_dst":"'+flow['srcIP']+
         '", "actions":"set_field=eth_src->'+flow['dstMAC']+',set_field=ipv4_src->'+flow['dstIP']+
         ',output='+flow['srcIP'].split('.')[3]+'"}'

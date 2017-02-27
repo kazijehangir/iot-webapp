@@ -1,8 +1,8 @@
 [{"flowname": "flow1",
-     "srcIP": "10.0.0.1", "srcMAC": "36:3d:f9:17:6a:21",
-     "dstIP": "10.0.0.2", "dstMAC": "b6:64:c6:b0:27:42",
+     "srcIP": "10.0.0.1", "srcMAC": "32:e6:44:44:32:ef",
+     "dstIP": "10.0.0.2", "dstMAC": "7e:62:5a:2c:98:62",
      "policy": "coursegrain2", "port": 5001},
 {"flowname": "flow2",
-     "srcIP": "10.0.0.2", "srcMAC": "b6:64:c6:b0:27:42",
-     "dstIP": "10.0.0.1", "dstMAC": "36:3d:f9:17:6a:21",
+     "srcIP": "10.0.0.2", "srcMAC": "7e:62:5a:2c:98:62",
+     "dstIP": "10.0.0.1", "dstMAC": "32:e6:44:44:32:ef",
      "policy": "coursegrain2", "port": 5002}]
