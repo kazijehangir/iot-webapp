@@ -1,10 +1,1 @@
-[{"flowname": "flow1",
-     "srcIP": "10.0.0.1", "srcMAC": "d2:91:75:31:78:4c",
-     "dstIP": "10.0.0.2", "dstMAC": "9e:2e:04:b9:08:d4",
-     "middleIP": "10.0.0.3", "middleMAC": "82:e0:bc:c3:3d:f9",
-     "policy": "coursegrain2", "port": 5001},
-{"flowname": "flow2",
-     "srcIP": "10.0.0.2", "srcMAC": "9e:2e:04:b9:08:d4",
-     "dstIP": "10.0.0.1", "dstMAC": "d2:91:75:31:78:4c",
-     "middleIP": "10.0.0.3", "middleMAC": "82:e0:bc:c3:3d:f9",
-     "policy": "coursegrain2", "port": 5002}]
+[{"flowname":"flow1","srcIP":"10.0.0.1","srcMAC":"d2:91:75:31:78:4c","dstIP":"10.0.0.2","dstMAC":"9e:2e:04:b9:08:d4","middleIP":"10.0.0.3","middleMAC":"82:e0:bc:c3:3d:f9","policy":"coursegrain3","port":5001},{"flowname":"flow2","srcIP":"10.0.0.2","srcMAC":"9e:2e:04:b9:08:d4","dstIP":"10.0.0.1","dstMAC":"d2:91:75:31:78:4c","middleIP":"10.0.0.3","middleMAC":"82:e0:bc:c3:3d:f9","policy":"freeflowing","port":5002}]
