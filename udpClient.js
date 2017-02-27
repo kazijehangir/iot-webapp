@@ -4,13 +4,15 @@ var HOST = '10.0.0.2';
 var dgram = require('dgram');
 var client = dgram.createSocket('udp4');
 client.bind(PORT)
+
 client.on('listening', function () {
     var address = client.address();
     console.log('UDP Server listening on ' + address.address + ":" + address.port);
 });
 client.on('message', function (message, remote) {
     console.log(remote.address + ':' + remote.port +' - ' + message);
-    console.timeEnd(Buffer.toString(message))
+    console.log(Buffer.toString(message))
+    // console.timeEnd(Buffer.toString(message))
 });
 for (var i = 0; i < 100; i++) {
     var message = new Buffer('packet#');
