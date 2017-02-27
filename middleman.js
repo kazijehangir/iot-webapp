@@ -26,6 +26,7 @@ function setupListener(flow) {
     server.on('message', function (message, remote) {
         // console.log(remote.address + ':' + remote.port +' - ' + message)
         if (packetCount++ % allowedRate == 0) {
+            message = simulateComputation(message)
             var client = dgram.createSocket('udp4')
             client.send(message, 0, message.length, PORT, flow['dstIP'], function(err, bytes) {
                 if (err) throw err
@@ -35,6 +36,12 @@ function setupListener(flow) {
         }
     })
     server.bind(PORT)
+}
+function simulateComputation(message) {
+    var crypto = require('crypto');
+    var name = message.toString('utf8');
+    var hash = crypto.createHash('md5').update(name).digest('hex');
+    console.log(hash); // 9b74c9897bac770ffc029102a200c5de
 }
 function getAllowedRate(policy) {
     if (policy == 'coursegrain1') {
