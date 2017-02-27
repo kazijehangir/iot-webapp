@@ -3,7 +3,7 @@ var HOST = '10.0.0.2';
 
 var dgram = require('dgram');
 var client = dgram.createSocket('udp4');
-
+client.bind(PORT)
 client.on('listening', function () {
     var address = client.address();
     console.log('UDP Server listening on ' + address.address + ":" + address.port);
