@@ -24,7 +24,7 @@ function setupListener(flow) {
         console.log('UDP Server listening on ' + address.address + ":" + address.port)
     })
     server.on('message', function (message, remote) {
-        console.log(remote.address + ':' + remote.port +' - ' + message)
+        // console.log(remote.address + ':' + remote.port +' - ' + message)
         if (packetCount++ % allowedRate == 0) {
             var client = dgram.createSocket('udp4')
             client.send(message, 0, message.length, PORT, flow['dstIP'], function(err, bytes) {
