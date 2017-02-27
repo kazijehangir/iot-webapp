@@ -14,7 +14,8 @@ client.on('message', function (message, remote) {
     //     if (err) throw err;
     //     console.log('UDP message sent to ' + remote.address +':'+ PORT + message);
     // });
-    console.timeEnd(Buffer.toString(message))
+    var c = console.timeEnd(Buffer.toString(message))
+    console.log(c)
 });
 for (var i = 0; i < 100; i++) {
     var message = new Buffer('packet#');
