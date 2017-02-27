@@ -11,8 +11,8 @@ client.on('listening', function () {
 });
 client.on('message', function (message, remote) {
     console.log(remote.address + ':' + remote.port +' - ' + message);
-    console.log(message.toString())
-    // console.timeEnd(Buffer.toString(message))
+    // console.log(message.toString())
+    console.timeEnd(message.toString())
 });
 for (var i = 0; i < 100; i++) {
     message = Buffer.concat([Buffer.from('packet#'), Buffer.from(i.toString())])

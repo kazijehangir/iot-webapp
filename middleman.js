@@ -34,6 +34,8 @@ function setupListener(flow) {
                 console.log('UDP message sent to ' + HOST +':'+ PORT + ' Packet Num: ' + packetCount)
                 client.close()
             })
+        } else {
+            console.log(message + ' FROM ' + remote.address + ':' + remote.port +' - DROPPED')
         }
     })
     server.bind(PORT)
