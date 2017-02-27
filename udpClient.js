@@ -14,7 +14,8 @@ client.on('message', function (message, remote) {
     console.log(remote.address + ':' + remote.port +' - ' + message);
     // console.log(message.toString())
     console.timeEnd(message)
-    var j = message.toString().split(' ')[1].parseInt()
+    var s = message.toString().split(' ')[1]
+    var j = s.parseInt()
     var duration = Date.now() - times[j]
     console.log(j.toString() + ',' + duration)
 });
