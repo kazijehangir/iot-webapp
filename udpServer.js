@@ -11,7 +11,7 @@ server.on('message', function (message, remote) {
     console.log(remote.address + ':' + remote.port +' - ' + message);
     server.send(message, 0, message.length, PORT, remote.address, function(err, bytes) {
         if (err) throw err;
-        console.log('UDP message sent to ' + remote.address +':'+ PORT + message);
+        console.log('UDP message sent to ' + remote.address +':'+ PORT +' '+ message);
     });
 });
 

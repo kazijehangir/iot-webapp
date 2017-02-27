@@ -17,7 +17,7 @@ for (var i = 0; i < 100; i++) {
     message = Buffer.concat([message, new Buffer(i.toString())])
     client.send(message , 0, message.length, PORT, HOST, function(err, bytes) {
         if (err) throw err;
-        console.log('UDP message sent to ' + HOST +':'+ PORT + ' i: ' + i);
+        // console.log('UDP message sent to ' + HOST +':'+ PORT + ' i: ' + i);
         console.time(Buffer.toString(message))
     });
 }
