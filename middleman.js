@@ -42,6 +42,7 @@ function simulateComputation(message) {
     var name = message.toString('utf8');
     var hash = crypto.createHash('md5').update(name).digest('hex');
     console.log(hash); // 9b74c9897bac770ffc029102a200c5de
+    return message
 }
 function getAllowedRate(policy) {
     if (policy == 'coursegrain1') {
