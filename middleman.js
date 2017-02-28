@@ -27,7 +27,7 @@ function setupListener(flow) {
         // console.log(remote.address + ':' + remote.port +' - ' + message)
         if (packetCount++ % allowedRate == 0) {
             HOST = (remote.address == flow['srcIP']) ? flow['dstIP'] : flow['srcIP']
-            // message = simulateComputation(message)
+             message = simulateComputation(message)
             var client = dgram.createSocket('udp4')
             client.send(message, 0, message.length, PORT, HOST, function(err, bytes) {
                 if (err) throw err
